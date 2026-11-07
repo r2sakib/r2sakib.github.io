@@ -201,6 +201,49 @@ const contactSection = (site, icon) => `
 </div>
 </section>`;
 
+// Served for any missing path, so its links start from the site root.
+export const renderNotFound = (site) => `<!doctype html>
+<html lang="en" style="--accent: ${esc(site.accent)}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found — ${esc(site.name)}</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Geist+Mono:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="page">
+<div class="topbar"><a class="brand" href="/">${esc(site.name)}</a></div>
+<main>
+<section class="contact">
+<div class="contact-text">
+<span class="contact-prompt">$ cd ./this-page</span>
+<h1 class="not-found">404: page not found.</h1>
+<p>This page doesn’t exist or has moved.</p>
+</div>
+<div class="contact-links">
+<a class="contact-link contact-link-primary" href="/"><span>back to home</span><span aria-hidden="true">→</span></a>
+</div>
+</section>
+</main>
+</div>
+</body>
+</html>
+`;
+
+export const renderFavicon = (site) =>
+  `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" fill="${esc(site.accent)}"/><text x="16" y="22" fill="#f4f3ee" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="15" font-weight="700" text-anchor="middle">${esc(site.initials)}</text></svg>\n`;
+
+export const renderRobots = (site) => `User-agent: *\nAllow: /\nSitemap: ${new URL("sitemap.xml", site.url).href}\n`;
+
+export const renderSitemap = (site) => `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc>${esc(site.url)}</loc></url>
+</urlset>
+`;
+
 export function renderPage(content, { icons, counts, year }) {
   const { site, projects, skills, publications, honors, education } = content;
   const icon = iconRenderer(icons);
@@ -232,6 +275,7 @@ export function renderPage(content, { icons, counts, year }) {
 <meta property="og:url" content="${esc(site.url)}">
 ${imageUrl ? `<meta property="og:image" content="${esc(imageUrl)}">` : ""}
 <meta name="theme-color" content="#f3f1ea">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Geist+Mono:wght@400;500;700&amp;display=swap">

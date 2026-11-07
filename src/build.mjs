@@ -2,7 +2,7 @@
 import { cpSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { renderPage } from "./template.mjs";
+import { renderFavicon, renderNotFound, renderPage, renderRobots, renderSitemap } from "./template.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const dist = join(root, "dist");
@@ -137,5 +137,9 @@ mkdirSync(dist);
 cpSync(join(root, "public"), dist, { recursive: true });
 cpSync(join(root, "src/style.css"), join(dist, "style.css"));
 writeFileSync(join(dist, "index.html"), renderPage(content, { icons, counts: counts(content), year: new Date().getFullYear() }));
+writeFileSync(join(dist, "404.html"), renderNotFound(content.site));
+writeFileSync(join(dist, "favicon.svg"), renderFavicon(content.site));
+writeFileSync(join(dist, "robots.txt"), renderRobots(content.site));
+writeFileSync(join(dist, "sitemap.xml"), renderSitemap(content.site));
 
 console.log(`Built dist/: ${content.projects.length} projects, ${content.publications.length} publications, ${content.honors.length} honors.`);
