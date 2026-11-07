@@ -304,7 +304,7 @@ ${contactSection(site, icon)}
 </main>
 
 <footer>
-<span>© ${year} ${esc(site.name)} · set in Geist &amp; Geist Mono</span>
+<span>© ${year} ${esc(site.name)}</span>
 <a href="#top">back to top ↑</a>
 </footer>
 
