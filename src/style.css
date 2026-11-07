@@ -315,6 +315,7 @@ h1 {
   align-items: center;
   justify-content: center;
   align-self: flex-start;
+  box-sizing: content-box;
   width: 40px;
   height: 40px;
   border: 1px solid var(--line);
@@ -615,6 +616,7 @@ h1 {
   align-items: center;
   justify-content: space-between;
   gap: 8px;
+  box-sizing: content-box;
   min-height: 44px;
   padding: 0 14px;
   border: 1px solid var(--ink);
@@ -623,7 +625,7 @@ h1 {
 }
 
 .contact-link-primary {
-  border-color: var(--accent);
+  border: 0;
   background: var(--accent);
   color: var(--on-accent);
   font-family: var(--mono);
