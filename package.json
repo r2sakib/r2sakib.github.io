@@ -1,0 +1,11 @@
+{
+  "name": "r2sakib-portfolio",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node src/build.mjs"
+  }
+}
