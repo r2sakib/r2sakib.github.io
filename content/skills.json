@@ -1,0 +1,55 @@
+[
+  {
+    "group": "languages",
+    "items": [
+      { "name": "Python", "icon": "python" },
+      { "name": "C", "icon": "c" },
+      { "name": "C++", "icon": "cpp" },
+      { "name": "JavaScript", "icon": "javascript" },
+      { "name": "TypeScript", "icon": "typescript" },
+      { "name": "Java", "icon": "java" },
+      { "name": "C#", "icon": "csharp" },
+      { "name": "PHP", "icon": "php" },
+      { "name": "SQL", "icon": "database" }
+    ]
+  },
+  {
+    "group": "frameworks",
+    "items": [
+      { "name": "React", "icon": "react" },
+      { "name": "React Native", "icon": "react" },
+      { "name": "Next.js", "icon": "nextjs" },
+      { "name": "Flask", "icon": "flask" }
+    ]
+  },
+  {
+    "group": "databases",
+    "items": [
+      { "name": "MySQL", "icon": "mysql" },
+      { "name": "OracleDB", "icon": "oracle" },
+      { "name": "PostgreSQL", "icon": "postgresql" }
+    ]
+  },
+  {
+    "group": "data & viz",
+    "items": [
+      { "name": "NumPy", "icon": "numpy" },
+      { "name": "Pandas", "icon": "pandas" },
+      { "name": "Matplotlib", "icon": "line-chart" },
+      { "name": "Excel", "icon": "table" },
+      { "name": "Power BI", "icon": "bar-chart" }
+    ]
+  },
+  {
+    "group": "tools & hardware",
+    "items": [
+      { "name": "Git", "icon": "git" },
+      { "name": "GitHub", "icon": "github" },
+      { "name": "Docker", "icon": "docker" },
+      { "name": "LaTeX", "icon": "latex" },
+      { "name": "draw.io", "icon": "drawio" },
+      { "name": "Arduino", "icon": "arduino" },
+      { "name": "ESP32", "icon": "esp32" }
+    ]
+  }
+]

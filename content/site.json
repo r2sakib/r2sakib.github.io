@@ -1,0 +1,23 @@
+{
+  "url": "https://r2sakib.github.io/",
+  "name": "Sadman Sakib",
+  "initials": "SS",
+  "photo": "img/photo.png",
+  "status": "open to opportunities",
+  "role": "software engineer · cse @ aiub",
+  "bio": "I build mobile and web apps, small games and ESP32 hardware, and I’ve published research on TinyML anomaly detection. Currently studying CSE at AIUB.",
+  "accent": "#1f4e8c",
+  "email": "sakibsadman035@gmail.com",
+  "github": "https://github.com/r2sakib",
+  "linkedin": "https://www.linkedin.com/in/r2sakib",
+  "stats": [
+    { "value": "3.91", "label": "cgpa at aiub" },
+    { "count": "projects", "label": "projects built" },
+    { "count": "publications", "label": "research papers" },
+    { "value": "5×", "label": "dean’s list" }
+  ],
+  "contact": {
+    "heading": "Let’s work together.",
+    "text": "Email is the fastest way to reach me."
+  }
+}

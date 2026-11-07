@@ -1,0 +1,79 @@
+[
+  {
+    "title": "ForkCast",
+    "kind": "mobile app",
+    "icon": "phone",
+    "featured": true,
+    "description": "Smart fridge and meal recommendation app. Ranks fridge items by expiry date and priority so food gets used before it spoils.",
+    "tech": [
+      { "label": "typescript", "icon": "typescript" },
+      { "label": "react native", "icon": "react" },
+      "expo"
+    ]
+  },
+  {
+    "title": "WordBlaster",
+    "kind": "game",
+    "icon": "gamepad",
+    "description": "2D typing game: type the words on falling bombs to destroy them. Waves get harder over time, with saved high scores, music and sound effects.",
+    "tech": [
+      { "label": "c++", "icon": "cpp" },
+      "opengl"
+    ]
+  },
+  {
+    "title": "Gesture-Controlled RC Car",
+    "kind": "robotics",
+    "icon": "chip",
+    "description": "A car driven by hand tilts: a wearable ESP32 with an MPU6050 sends low-latency commands over ESP-NOW, plus a Wi-Fi access point for driving from a phone browser.",
+    "tech": [
+      { "label": "esp32", "icon": "esp32" },
+      { "label": "arduino c++", "icon": "arduino" },
+      "esp-now",
+      "websockets"
+    ]
+  },
+  {
+    "title": "University Management System",
+    "kind": "web · team of 4",
+    "icon": "globe",
+    "description": "Role-based portals for admins, department heads, faculty and students to manage courses, enrolment and grades.",
+    "tech": [
+      { "label": "php", "icon": "php" },
+      { "label": "javascript", "icon": "javascript" },
+      { "label": "mysql", "icon": "mysql" }
+    ]
+  },
+  {
+    "title": "Bank Management System",
+    "kind": "desktop",
+    "icon": "bank",
+    "link": "https://github.com/r2sakib/bank_management_system",
+    "description": "One login routes users to role-based dashboards: managers handle accounts and staff, cashiers handle deposits and transfers, customers view accounts and send funds.",
+    "tech": [
+      { "label": "java", "icon": "java" },
+      "file storage"
+    ]
+  },
+  {
+    "title": "Arduino Temperature Clock",
+    "kind": "embedded",
+    "icon": "thermometer",
+    "description": "Breadboard device showing time, date and room temperature, with a built-in stopwatch and timer.",
+    "tech": [
+      { "label": "arduino nano", "icon": "arduino" },
+      { "label": "esp8266", "icon": "esp32" },
+      "oled · lcd"
+    ]
+  },
+  {
+    "title": "NoteApp",
+    "kind": "desktop",
+    "icon": "note",
+    "description": "Desktop app to create, edit, search and save notes.",
+    "tech": [
+      { "label": "c# · .net", "icon": "csharp" },
+      { "label": "oracledb", "icon": "oracle" }
+    ]
+  }
+]
