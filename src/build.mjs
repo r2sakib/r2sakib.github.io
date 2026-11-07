@@ -18,7 +18,8 @@ function readJson(name) {
     const position = error.message.match(/position (\d+)/);
     const line = position ? text.slice(0, Number(position[1])).split("\n").length : null;
     const reason = error.message.replace(/ in JSON.*$/, "").replace(/ \(line.*$/, "");
-    problems.push(`${file}${line ? ` line ${line}` : " (near the end)"}: ${reason}. Check for a missing comma, quote or bracket.`);
+    // JSON only notices a missing comma at the next item, so the mistake can be on the line before.
+    problems.push(`${file}${line ? ` near line ${line}` : " near the end"}: ${reason}. Check for a missing comma, quote or bracket.`);
     return null;
   }
 }
