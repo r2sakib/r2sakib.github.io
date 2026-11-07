@@ -6,6 +6,7 @@
     "node": ">=22"
   },
   "scripts": {
-    "build": "node src/build.mjs"
+    "build": "node src/build.mjs",
+    "dev": "node src/dev.mjs"
   }
 }
