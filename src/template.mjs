@@ -179,12 +179,14 @@ ${statLine}`;
 }
 
 function stats(site, counts) {
-  if (!site.stats?.length) return "";
-  const items = site.stats.map((stat) => {
-    const value = stat.count === undefined ? stat.value : counts[stat.count];
-    return `<div class="stat"><span class="stat-value">${esc(value)}</span><span class="stat-label">${esc(stat.label)}</span></div>`;
-  });
-  return `<div class="stats">\n${items.join("\n")}\n</div>`;
+  // A counted stat with nothing to count is hidden along with its section.
+  const items = (site.stats ?? [])
+    .filter((stat) => stat.count === undefined || counts[stat.count] > 0)
+    .map((stat) => {
+      const value = stat.count === undefined ? stat.value : counts[stat.count];
+      return `<div class="stat"><span class="stat-value">${esc(value)}</span><span class="stat-label">${esc(stat.label)}</span></div>`;
+    });
+  return items.length ? `<div class="stats">\n${items.join("\n")}\n</div>` : "";
 }
 
 const contactSection = (site, icon) => `
