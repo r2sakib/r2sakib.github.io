@@ -135,6 +135,7 @@ stopIfProblems();
 rmSync(dist, { recursive: true, force: true });
 mkdirSync(dist);
 cpSync(join(root, "public"), dist, { recursive: true });
+cpSync(join(root, "src/style.css"), join(dist, "style.css"));
 writeFileSync(join(dist, "index.html"), renderPage(content, { icons, counts: counts(content), year: new Date().getFullYear() }));
 
 console.log(`Built dist/: ${content.projects.length} projects, ${content.publications.length} publications, ${content.honors.length} honors.`);
