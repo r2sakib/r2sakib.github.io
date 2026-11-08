@@ -44,7 +44,7 @@ Add this to `content/projects.json`:
 }
 ```
 
-- `github` is optional. When it's there, a "github ↗" button appears beside the title.
+- `github` is optional. When it's there, a GitHub logo button appears beside the title.
 - Publications take an optional `link` instead, which turns the paper's title into a link.
 - `"featured": true` gives the project the large card.
 - In `tech`, a plain string like `"flask"` is a tag with no icon.

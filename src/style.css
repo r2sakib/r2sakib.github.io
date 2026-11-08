@@ -351,19 +351,16 @@ h1 {
   display: inline-flex;
   flex: none;
   align-items: center;
-  gap: 6px;
-  min-height: 32px;
-  padding: 0 10px;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
   border: 1px solid var(--ink);
   background: var(--card);
-  font-family: var(--mono);
-  font-size: 12px;
-  text-decoration: none;
 }
 
 .repo-link:hover {
   border-color: var(--accent);
-  color: var(--accent);
+  background: var(--paper);
 }
 
 .project p {

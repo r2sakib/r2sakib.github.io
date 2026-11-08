@@ -42,7 +42,7 @@ function projectCard(project, index, icon) {
     .join("\n");
   const number = pad(index + 1);
   const repo = project.github
-    ? `<a class="repo-link" href="${esc(project.github)}" aria-label="${esc(project.title)} on GitHub">${icon("github", 14)}github<span aria-hidden="true">↗</span></a>`
+    ? `<a class="repo-link" href="${esc(project.github)}" aria-label="${esc(project.title)} on GitHub" title="View on GitHub">${icon("github", 18)}</a>`
     : "";
   const title = `<div class="project-title"><h3>${esc(project.title)}</h3>${repo}</div>`;
 
