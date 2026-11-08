@@ -77,6 +77,10 @@ function validate(content, icons) {
     const where = `content/projects.json project ${i + 1}${project?.title ? ` "${project.title}"` : ""}`;
     requireFields(project, ["title", "kind", "icon", "description"], where);
     checkIcon(project?.icon, where);
+    if (project?.github && !/^https:\/\/github\.com\/[^\s"]+$/.test(project.github)) {
+      problems.push(`${where}: "github" should look like https://github.com/r2sakib/repo-name`);
+    }
+    if (project?.link) problems.push(`${where}: "link" was renamed, use "github" instead`);
     for (const tag of project?.tech ?? []) {
       if (typeof tag === "string") continue;
       requireFields(tag, ["label"], `${where} tech`);

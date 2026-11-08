@@ -38,13 +38,14 @@ Add this to `content/projects.json`:
   "title": "My Project",
   "kind": "web",
   "icon": "globe",
-  "link": "https://github.com/r2sakib/my-project",
+  "github": "https://github.com/r2sakib/my-project",
   "description": "What it does in a sentence or two.",
   "tech": [{ "label": "python", "icon": "python" }, "flask"]
 }
 ```
 
-- `link` is optional. When it's there, the title becomes a link. It also works on publications.
+- `github` is optional. When it's there, a "github ↗" button appears beside the title.
+- Publications take an optional `link` instead, which turns the paper's title into a link.
 - `"featured": true` gives the project the large card.
 - In `tech`, a plain string like `"flask"` is a tag with no icon.
 - Project numbers, the count beside each heading and the "projects built" stat all update by themselves.

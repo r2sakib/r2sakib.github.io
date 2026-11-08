@@ -4,6 +4,7 @@
     "kind": "mobile app",
     "icon": "phone",
     "featured": true,
+    "github": "https://github.com/r2sakib/ForkCast",
     "description": "Smart fridge and meal recommendation app. Ranks fridge items by expiry date and priority so food gets used before it spoils.",
     "tech": [
       { "label": "typescript", "icon": "typescript" },
@@ -15,6 +16,7 @@
     "title": "WordBlaster",
     "kind": "game",
     "icon": "gamepad",
+    "github": "https://github.com/r2sakib/WordBlaster",
     "description": "2D typing game: type the words on falling bombs to destroy them. Waves get harder over time, with saved high scores, music and sound effects.",
     "tech": [
       { "label": "c++", "icon": "cpp" },
@@ -25,6 +27,7 @@
     "title": "Gesture-Controlled RC Car",
     "kind": "robotics",
     "icon": "chip",
+    "github": "https://github.com/r2sakib/esp32-gesture-rc-car",
     "description": "A car driven by hand tilts: a wearable ESP32 with an MPU6050 sends low-latency commands over ESP-NOW, plus a Wi-Fi access point for driving from a phone browser.",
     "tech": [
       { "label": "esp32", "icon": "esp32" },
@@ -37,6 +40,7 @@
     "title": "University Management System",
     "kind": "web · team of 4",
     "icon": "globe",
+    "github": "https://github.com/r2sakib/wt-project",
     "description": "Role-based portals for admins, department heads, faculty and students to manage courses, enrolment and grades.",
     "tech": [
       { "label": "php", "icon": "php" },
@@ -48,7 +52,7 @@
     "title": "Bank Management System",
     "kind": "desktop",
     "icon": "bank",
-    "link": "https://github.com/r2sakib/bank_management_system",
+    "github": "https://github.com/r2sakib/bank_management_system",
     "description": "One login routes users to role-based dashboards: managers handle accounts and staff, cashiers handle deposits and transfers, customers view accounts and send funds.",
     "tech": [
       { "label": "java", "icon": "java" },
@@ -59,6 +63,7 @@
     "title": "Arduino Temperature Clock",
     "kind": "embedded",
     "icon": "thermometer",
+    "github": "https://github.com/r2sakib/Arduino_ESP8266_Temp_Clock",
     "description": "Breadboard device showing time, date and room temperature, with a built-in stopwatch and timer.",
     "tech": [
       { "label": "arduino nano", "icon": "arduino" },
@@ -70,6 +75,7 @@
     "title": "NoteApp",
     "kind": "desktop",
     "icon": "note",
+    "github": "https://github.com/r2sakib/NoteApp",
     "description": "Desktop app to create, edit, search and save notes.",
     "tech": [
       { "label": "c# · .net", "icon": "csharp" },

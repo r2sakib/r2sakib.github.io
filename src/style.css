@@ -101,6 +101,17 @@ main {
   text-decoration: none;
 }
 
+/* On phones the hero already shows the name, so the bar keeps just the links. */
+@media (max-width: 640px) {
+  .brand-wide {
+    display: none;
+  }
+
+  .topbar nav {
+    margin: 0 -10px;
+  }
+}
+
 /* hero */
 .hero {
   display: flex;
@@ -323,9 +334,36 @@ h1 {
   color: var(--accent);
 }
 
+.project-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
 .project h3 {
+  min-width: 0;
   font-size: 17px;
   font-weight: 700;
+}
+
+.repo-link {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: 6px;
+  min-height: 32px;
+  padding: 0 10px;
+  border: 1px solid var(--ink);
+  background: var(--card);
+  font-family: var(--mono);
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.repo-link:hover {
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 .project p {
@@ -366,9 +404,7 @@ h1 {
 
 .project-featured {
   grid-column: 1 / -1;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 20px 28px;
+  gap: 16px;
   padding: 22px;
   border-color: var(--ink);
   box-shadow: var(--shadow);
@@ -388,6 +424,12 @@ h1 {
 .project-featured .project-icon {
   width: 44px;
   height: 44px;
+}
+
+.project-body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 28px;
 }
 
 .project-main {

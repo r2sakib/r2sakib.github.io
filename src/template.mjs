@@ -41,20 +41,28 @@ function projectCard(project, index, icon) {
     .map((tag) => `<span class="tag">${icon(tag.icon, 13)}${esc(tag.label)}</span>`)
     .join("\n");
   const number = pad(index + 1);
+  const repo = project.github
+    ? `<a class="repo-link" href="${esc(project.github)}" aria-label="${esc(project.title)} on GitHub">${icon("github", 14)}github<span aria-hidden="true">↗</span></a>`
+    : "";
+  const title = `<div class="project-title"><h3>${esc(project.title)}</h3>${repo}</div>`;
 
   if (project.featured) {
     return `
 <article class="project project-featured">
-<div class="project-main">
+<div class="project-top">
 <span class="project-icon">${icon(project.icon, 22)}</span>
-<h3>${titled(project)}</h3>
+<span class="label">${number} · featured · ${esc(project.kind)}</span>
+</div>
+<div class="project-body">
+<div class="project-main">
+${title}
 <p>${esc(project.description)}</p>
 </div>
 <div class="project-side">
-<span class="label">${number} · featured · ${esc(project.kind)}</span>
 <span class="built-with">built with</span>
 <div class="tags">
 ${tech}
+</div>
 </div>
 </div>
 </article>`;
@@ -66,7 +74,7 @@ ${tech}
 <span class="project-icon">${icon(project.icon, 20)}</span>
 <span class="label">${number} · ${esc(project.kind)}</span>
 </div>
-<h3>${titled(project)}</h3>
+${title}
 <p>${esc(project.description)}</p>
 <div class="tags tags-divided">
 ${tech}
@@ -287,7 +295,7 @@ ${imageUrl ? `<meta property="og:image" content="${esc(imageUrl)}">` : ""}
 <div class="page">
 
 <div class="topbar">
-<a class="brand" href="#top">${esc(site.name)}</a>
+<a class="brand brand-wide" href="#top">${esc(site.name)}</a>
 <nav aria-label="Sections">
 ${nav}
 </nav>
