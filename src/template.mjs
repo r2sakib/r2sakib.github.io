@@ -44,37 +44,15 @@ function projectCard(project, index, icon) {
   const repo = project.github
     ? `<a class="repo-link" href="${esc(project.github)}" aria-label="${esc(project.title)} on GitHub" title="View on GitHub">${icon("github", 18)}</a>`
     : "";
-  const title = `<div class="project-title"><h3>${esc(project.title)}</h3>${repo}</div>`;
-
-  if (project.featured) {
-    return `
-<article class="project project-featured">
-<div class="project-top">
-<span class="project-icon">${icon(project.icon, 22)}</span>
-<span class="label">${number} · featured · ${esc(project.kind)}</span>
-</div>
-<div class="project-body">
-<div class="project-main">
-${title}
-<p>${esc(project.description)}</p>
-</div>
-<div class="project-side">
-<span class="built-with">built with</span>
-<div class="tags">
-${tech}
-</div>
-</div>
-</div>
-</article>`;
-  }
+  const featured = Boolean(project.featured);
 
   return `
-<article class="project">
+<article class="project${featured ? " project-featured" : ""}">
 <div class="project-top">
-<span class="project-icon">${icon(project.icon, 20)}</span>
-<span class="label">${number} · ${esc(project.kind)}</span>
+<span class="project-icon">${icon(project.icon, featured ? 22 : 20)}</span>
+<span class="label">${number}${featured ? " · featured" : ""} · ${esc(project.kind)}</span>
 </div>
-${title}
+<div class="project-title"><h3>${esc(project.title)}</h3>${repo}</div>
 <p>${esc(project.description)}</p>
 <div class="tags tags-divided">
 ${tech}
